@@ -12,33 +12,25 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 
-@WebServlet("/Login")
-public class Login extends HttpServlet {
+@WebServlet("/Servlet1")
+public class Servlet1 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
-    
+   
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-			
+		
 		response.setContentType("text/html");
 		
 		PrintWriter out = response.getWriter();
 		
-		String userMail = request.getParameter("email");
-		String pass = request.getParameter("pwd");
+		//Cookie[] ck = request.getCookies();
 		
-		out.println("user email : "+userMail);
-		
-		//Cookie ck = new Cookie("info", userMail);
-		
-		//response.addCookie(ck);
+		//out.println("<h3> From servlt1 : "+ck[0].getValue()+"</h3>");
 		
 		HttpSession session = request.getSession();
 		
-		session.setAttribute("info", userMail);
+		String user = (String)session.getAttribute("info");
 		
-		
-			out.println("<br><a href = 'Servlet1'>successfully logged in go to next</a>");
-		
+		out.println("<h3> From servlt1 : "+user+"</h3>");
 	}
 
 }
