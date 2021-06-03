@@ -1,3 +1,6 @@
+<%@page import="com.test.Employee"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,7 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="btc/login" >
+	<form action="btc/login" >
 		<h1>login page</h1>
 		Enter Email : <input type = "text" name = "email"><br><br>
 		Enter Password : <input type = "password" name = "pwd"><br><br>

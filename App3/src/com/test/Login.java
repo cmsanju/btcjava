@@ -11,11 +11,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-@WebServlet("/Login")
+//@WebServlet("/Login")
 public class Login extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		response.setContentType("text/html");
 		
@@ -25,7 +25,14 @@ public class Login extends HttpServlet {
 		
 		String pass = request.getParameter("pwd");
 		
-		if(email.equals("admin") && pass.equals("admin"))
+		Employee e = new Employee();
+		
+		e.setEmail(email);
+		e.setPass(pass);
+		
+		out.println(e.getEmail()+" "+e.getPass());
+		
+		if(e.getEmail().equals("admin") && e.getPass().equals("admin"))
 		{
 			//out.println("login success");
 			
@@ -41,5 +48,5 @@ public class Login extends HttpServlet {
 			rd.include(request, response);
 		}
 	}
-
+	
 }
