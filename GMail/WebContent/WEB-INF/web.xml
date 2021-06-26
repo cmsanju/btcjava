@@ -9,4 +9,52 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  
+  <servlet>
+  		<servlet-name>s1</servlet-name>
+  		<servlet-class>com.test.Servlet1</servlet-class>
+  </servlet>
+  
+  <context-param>
+  		<param-name>city</param-name>
+  		<param-value>Blr</param-value>
+  </context-param>
+  
+  <context-param>
+  		<param-name>state</param-name>
+  		<param-value>KA</param-value>
+  </context-param>
+  
+  <servlet-mapping>
+  		<servlet-name>s1</servlet-name>
+  		<url-pattern>/context</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+  		<servlet-name>s2</servlet-name>
+  		<servlet-class>com.test.Servlet1</servlet-class>
+  		
+  		<init-param>
+  				<param-name>user</param-name>
+  				<param-value>admin</param-value>
+  		</init-param>
+  		
+  		<init-param>
+  			<param-name>pwd</param-name>
+  			<param-value>admin</param-value>
+  		</init-param>
+  		
+  </servlet>
+  
+  
+  
+  <servlet-mapping>
+  		<servlet-name>s2</servlet-name>
+  		<url-pattern>/config</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
 </web-app>
