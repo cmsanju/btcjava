@@ -2,6 +2,7 @@ package com.test;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Statement;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -16,6 +17,8 @@ public class Register extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		try
+		{
 		response.setContentType("text/html");
 		
 		PrintWriter out = response.getWriter();
@@ -25,6 +28,21 @@ public class Register extends HttpServlet {
 		String user = request.getParameter("email");
 		
 		String pass = request.getParameter("pwd");
+		
+		Statement stmt =  DBConnect.getConnect().createStatement();
+		
+		
+		String sql = "create table evngUser(first_name varchar(50), email varchar(50), password varchar(50))";
+		
+		//stmt.execute(sql);
+		
+		String sql1 = "insert into evngUser values('"+name+"', '"+user+"','"+pass+"')";
+		
+		stmt.execute(sql1);
+		
+		out.println("User added successfully.");
+		
+		/*
 		
 		if(pass.contains("admin"))
 		{
@@ -38,6 +56,11 @@ public class Register extends HttpServlet {
 			
 			RequestDispatcher rd = request.getRequestDispatcher("register.html");
 			rd.include(request, response);
+		}
+		*/
+		}catch(Exception e)
+		{
+			e.printStackTrace();
 		}
 		
 	}

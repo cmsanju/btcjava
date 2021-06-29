@@ -2,6 +2,8 @@ package com.test;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.ResultSet;
+import java.sql.Statement;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -17,6 +19,10 @@ public class Login extends HttpServlet {
     
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		try
+		{
+			
+		
 		response.setContentType("text/html");
 		
 		PrintWriter out = response.getWriter();
@@ -25,6 +31,19 @@ public class Login extends HttpServlet {
 		
 		String pass = request.getParameter("pwd");
 		
+		Statement stmt = DBConnect.getConnect().createStatement();
+		
+		String sql = "select * from evnguser";
+		
+		ResultSet rs = stmt.executeQuery(sql);
+		
+		while(rs.next())
+		{
+		
+		out.println("<br>First Name : "+rs.getString(1)+" Email : "+rs.getString(2)+" Password : "+rs.getString(3));
+		
+		}
+		/*
 		if(user.equals("admin") && pass.equals("admin"))
 		{
 			//RequestDispatcher rd = request.getRequestDispatcher("home.html");
@@ -40,6 +59,12 @@ public class Login extends HttpServlet {
 			RequestDispatcher rd = request.getRequestDispatcher("login.html");
 			
 			rd.include(request, response);
+		}
+		*/
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
 		}
 		
 		

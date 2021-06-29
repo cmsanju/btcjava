@@ -9,25 +9,28 @@ public class Test1 {
 		
 		
 		
+		System.out.println(badMethod());
+	
+	}
+	
+	public static String badMethod()
+	{
 		try {
-			badMethod();
-			System.out.println("a");
+			System.out.println("TEST");
+			System.exit(0);
+			return "rupesh";
 		} catch (Exception e) {
-			// TODO: handle exception
-			System.out.println("b");
+			return "catch";
+			
 			
 		}
 		finally
 		{
-			System.out.println("c");
+			return "Cognizant";
 		}
-		System.out.println("d");
+		
 		
 	
-	}
-	public static void badMethod()
-	{
-		throw new Error();
 	}
 
 }
