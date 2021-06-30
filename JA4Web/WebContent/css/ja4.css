@@ -1,0 +1,19 @@
+
+		body{
+			background-color: seagreen;
+			font: italic;
+			color: white;
+		}
+		.button{
+			height: 10%;
+			width: 15%;
+			color: red;
+			opacity: all;
+			background-color: grey;
+		}
+		.error{
+			color: red;
+		}
+		.hover{
+
+		}

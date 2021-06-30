@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration</title>
+	<link rel = "stylesheet" type = "text/css" href = "css/ja4.css">
+	
+	<script type="text/javascript">
+		
+		function validateLogin() {
+			var firstName = document.loginform.fname.value;
+			var password = document.loginform.pwd.value;
+			if(firstName == null || firstName == "")
+			{
+					alert("First Name required");
+			}
+			else if(password.length < 8)
+				{
+				  alert("password length must be more than 8 chars");
+				}
+			
+		}
+	
+	</script>
+</head>
+<body>
+	<form action="#" name="loginform" onsubmit="validateLogin()">
+		<h2>Registration form</h2>
+		<span class="error">*</span>FirstName : <input type="text" name="fname"><br><br>
+		<span class="error">*</span>LastName  : <input type="text" name="lname"><br><br>
+		<span class="error">*</span>UserName<span class="error">*</span>  : <input type="text" name="user" ><br><br>
+		<span class="error">*</span>Password  : <input type="password" name="pwd" ><br><br>
+
+		Gender  : <input type="radio" name="gender" value="Male"> Male
+		          <input type="radio" name="gender" value="Female">Female<br><br>
+		Skills : <input type="checkbox" name="s1" value="Java">Java&nbsp;&nbsp;&nbsp;
+		         <input type="checkbox" name="s2" value=".net">.Net&nbsp;&nbsp;&nbsp;&nbsp;
+		         <input type="checkbox" name="s3" value="Python">Python<br><br>
+		Select City : <select name = "city">
+				<option>select city</option>
+				<option value="Bengaluru">Bengaluru</option>
+				<option value="Hyderabad">Hyderabad</option>
+		</select><br><br>
+		Address : <textarea name = "adr" rows="6" cols="10"></textarea><br><br>
+		DOB : <input type="date" name="dob"><br><br>
+
+				<input type="submit" value="register">
+				<button class="button" type="submit">Login</button>
+</form>
+</body>
+</html>
