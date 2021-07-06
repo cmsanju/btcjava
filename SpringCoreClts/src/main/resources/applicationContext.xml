@@ -18,7 +18,7 @@
 				<property name="loc" value="Hyd"></property>
 		</bean>
 		
-		<bean id = "std" class = "com.test.Student">
+		<bean id = "std" class = "com.test.Student" autowire="default" factory-method="getDeatails">
 			<property name="id" value = "111"></property>
 			<property name="name" value = "sharath"></property>
 			<property name="clg" value = "IIT"></property>
@@ -34,10 +34,8 @@
 						<ref bean="crs"></ref>
 						<ref bean="crs1"></ref>
 					</list>
+					
 			</property>
 		</bean>
-
-
-
 
 </beans>

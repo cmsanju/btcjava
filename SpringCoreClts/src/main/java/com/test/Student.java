@@ -2,13 +2,17 @@ package com.test;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class Student {
 	
 	private int id;
 	private String name;
 	private String clg;
+	
 	private List<String> job;
 	
+	@Autowired
 	private List<Course> crs;
 	
 	public Student()
@@ -24,7 +28,10 @@ public class Student {
 		this.crs = crs;
 	}
 
-
+	public Student getDetails()
+	{
+		return new Student();
+	}
 
 	public int getId() {
 		return id;
