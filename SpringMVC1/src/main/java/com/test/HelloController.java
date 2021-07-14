@@ -9,18 +9,18 @@ public class HelloController {
 	@RequestMapping("/hello")
 	public String sayHello()
 	{
-		return "greet.jsp";
+		return "greet";
 	}
 	
 	@RequestMapping("/nextpage")
 	public String sayAgain()
 	{
-		return "greet1.jsp";
+		return "greet1";
 	}
 
 	@RequestMapping("/lastgreet")
 	public String sayLast()
 	{
-		return "index.jsp";
+		return "index";
 	}
 }
