@@ -27,8 +27,15 @@ import com.test.springboot.crud.service.SequenceGeneratorService;
 @RestController
 @RequestMapping("/api/v1")
 public class EmployeeController {
+	
 	@Autowired
 	private EmployeeRepository employeeRepository;
+	
+	
+	
+	public void setEmployeeRepository(EmployeeRepository employeeRepository) {
+		this.employeeRepository = employeeRepository;
+	}
 	
 	@Autowired
 	private SequenceGeneratorService sequenceGeneratorService;
@@ -48,7 +55,7 @@ public class EmployeeController {
 
 	@PostMapping("/employees")
 	public Employee createEmployee(@Valid @RequestBody Employee employee) {
-		employee.setId(sequenceGeneratorService.generateSequence(Employee.SEQUENCE_NAME));
+		//employee.setId(sequenceGeneratorService.generateSequence(Employee.SEQUENCE_NAME));
 		return employeeRepository.save(employee);
 	}
 
@@ -76,4 +83,6 @@ public class EmployeeController {
 		response.put("deleted", Boolean.TRUE);
 		return response;
 	}
+	
+	
 }
