@@ -10,7 +10,7 @@
 
 <!-- Configure Employee Bean and initialize it -->
 <bean name="employee" class="com.test.spring.model.Employee">
-	<property name="name" value="Dummy Name"></property>
+	<property name="name" value="Amit Kumar"></property>
 </bean>
 
 <!-- Configure EmployeeService bean -->
