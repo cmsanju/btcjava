@@ -27,4 +27,10 @@ public class TestData {
  * 1 create the table 
  * 2 write the dao operations
  * 3 execute the logic
+ * 
+ * for amit kumar
+ * with jdbctemplate create application with the concept of batch and transaction management 
+ * 
+ * scanner class accept the inputs
+ * 
  */
