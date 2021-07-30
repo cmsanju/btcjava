@@ -11,10 +11,12 @@ public class EmpDao {
 	
 	static
 	{
-		listEmpList.getEmpList().add(new Employee(111, "Alekya", "EEE", "hyd"));
-		listEmpList.getEmpList().add(new Employee(222, "VVSS", "rAMYA", "blr"));
-		listEmpList.getEmpList().add(new Employee(333, "GS", "ECE", "CHENNAI"));
-		listEmpList.getEmpList().add(new Employee(444, "Deepthi", "IT", "Kolkata"));
+		listEmpList.getEmpList().add(new Employee(111, "Manohar", "EEE", "hyd"));
+		listEmpList.getEmpList().add(new Employee(222, "Amit", "kumar", "blr"));
+		listEmpList.getEmpList().add(new Employee(333, "Harika", "ECE", "CHENNAI"));
+		listEmpList.getEmpList().add(new Employee(444, "Lakshmi", "IT", "Kolkata"));
+		listEmpList.getEmpList().add(new Employee(555, "Gous", "Mulla", "Blr"));
+		listEmpList.getEmpList().add(new Employee(666, "Sai", "prasad", "Hyd"));
 	}
 	
 	public Employees getAllEmployees()
