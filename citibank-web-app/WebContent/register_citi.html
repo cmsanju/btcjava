@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>register</title>
+	<style type="text/css">
+		
+		body{
+			background-color: skyblue;
+
+			font-family: italic;
+		}
+
+		h1{
+			color: red;
+			background-color: purple;
+		}
+
+		.custom{
+			font-family: cursive;
+			color: darkblue;
+		}
+		.error{
+			color: red;
+		}
+
+	</style>
+</head>
+<body>
+	
+		<h1 class ="custom" align="center">Registration Page</h1>
+<center>
+	<form action="#">
+		<label>Enter FirstName<span class="error">*</span> :</label> <input type="text" class = "custom" name="fname"><input type="text" name="fname"><input type="text" name="fname" required="first name is required"><br><br>
+
+		Enter LastName <span class="error">*</span>: <input type="text" name="lname"><br><br>
+
+		Select Course : <select name = "course">
+							<option>Select Course</option>
+							<option value="B.Tech/BE">B.Tech / BE</option>
+							<option value="masters">Masters</option>
+							<option value="Phd">Phd</option>
+						</select><br><br>
+		Select Country : <select name = "ctr">
+							<option>Select Country</option>
+							<option value="india">India</option>
+							<option value="uk">UK</option>
+							<option value="usa">USA</option>
+						</select><br><br>
+		Select Gender : <input type="radio" name="gender" value="male">Male &nbsp;&nbsp;
+						<input type="radio" name="gender" value="female">FeMale &nbsp;&nbsp;
+						<input type="radio" name="gender" value="others">Others &nbsp;&nbsp;
+						<br>
+		Select Skills : <input type="checkbox" name="skill1" value="Java">Java &nbsp;&nbsp;
+		                <input type="checkbox" name="skill2" value=".net">.Net &nbsp;&nbsp;               <input type="checkbox" name="skill3" value="Python">python<br>
+		Feedback    : &nbsp; <textarea name ="fb" cols="50" rows="10"></textarea><br><br>
+
+					<input type="submit" value="register">
+	
+	</center>
+	</form>
+</body>
+</html>

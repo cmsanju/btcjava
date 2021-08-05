@@ -1,0 +1,26 @@
+h1{
+			font-family: italic;
+			color: purple;
+			background-color: blue;
+		}
+
+		p{
+			color: green;
+			font: bold;
+		}
+		hr{
+
+		}
+		marquee{
+
+		}
+
+		.a1{
+			color: green;
+		}
+		.a2{
+			color: skyblue;
+		}
+		body{
+			background-image: url(cloud.jpeg);
+		}
