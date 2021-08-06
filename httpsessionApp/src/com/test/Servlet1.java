@@ -26,11 +26,13 @@ public class Servlet1 extends HttpServlet {
 		
 		//out.println("User from servlet1 : "+ck[0].getValue());
 		
-		HttpSession session = request.getSession();
+		HttpSession session = request.getSession(false);
 		
 		String user = (String)session.getAttribute("info");
 		
-		out.println(user);
+		out.println(user+" logged out successfully.");
+		
+		session.invalidate();
 	}
 
 }

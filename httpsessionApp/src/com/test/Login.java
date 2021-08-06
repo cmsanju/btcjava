@@ -3,6 +3,7 @@ package com.test;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.Cookie;
@@ -38,7 +39,15 @@ public class Login extends HttpServlet {
 		
 		session.setAttribute("info", user);
 		
-		out.println("<a href = 'Servlet1'> go to next page</a>");
+		ServletContext ctx = getServletContext();
+		
+		int total = (int)ctx.getAttribute("totaluser");
+		int current = (int)ctx.getAttribute("currentuser");
+		
+		out.println("Total Users : "+total);
+		out.println("Current users : "+current);
+		
+		out.println("<a href = 'Servlet1'> logout</a>");
 	}
 
 }
