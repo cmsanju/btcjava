@@ -8,13 +8,13 @@
 <title>Insert title here</title>
 </head>
 <body>
-		<x:eveng></x:eveng>
+		<x:mng></x:mng>
 		
 		<jsp:useBean id="emp" class = "com.test.Employee"></jsp:useBean>
 		
-		<jsp:setProperty property="id" name="emp" value="101"/>
-		<jsp:setProperty property="name" name="emp" value="jAVA"/>
-		<jsp:setProperty property="salary" name="emp" value="1234.78"/>
+		<jsp:setProperty property="id" name="emp" value="11"/>
+		<jsp:setProperty property="name" name="emp" value="Apple"/>
+		<jsp:setProperty property="salary" name="emp" value="3456.45"/>
 		
 		<jsp:getProperty property="id" name="emp"/>
 		<jsp:getProperty property="name" name="emp"/>

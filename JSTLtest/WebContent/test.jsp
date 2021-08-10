@@ -13,7 +13,7 @@
 
 	
   	
-	<c:set var = "age" scope = "session" value = "${20}"></c:set>
+	<c:set var = "age" scope = "session" value = "${10}"></c:set>
 	
 	
 <%-- 	<c:remove var="age"/> --%>

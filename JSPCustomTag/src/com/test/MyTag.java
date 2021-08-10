@@ -19,7 +19,7 @@ public class MyTag extends TagSupport
 		 
 		 out.println("Current Date Time : "+date);
 		 
-		 out.println("<br> this is custom tag example");
+		 out.println("<br> this is custom tag updated<br>");
 	 }
 	 catch(Exception e)
 	 {
