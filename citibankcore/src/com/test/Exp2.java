@@ -26,6 +26,9 @@ public class Exp2 {
 			System.out.println("age < 18");
 		}
 		
+		System.out.println(":::::::Candidate Details:::::");
+		System.out.println("Your age : "+x);
+		
 	}
 
 }
