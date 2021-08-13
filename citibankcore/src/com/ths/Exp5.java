@@ -13,6 +13,8 @@ public class Exp5 implements Runnable
 		
 		ThreadGroup tg1 = new ThreadGroup("Bank");
 		
+		System.out.println(tg1);
+		
 		Thread t2 = new Thread(tg1, t1,"Credit");
 		Thread t3 = new Thread(tg1, t1, "Transfer");
 		Thread t4 = new Thread(tg1, t1, "withdraw");
