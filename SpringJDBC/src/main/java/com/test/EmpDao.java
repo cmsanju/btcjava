@@ -25,5 +25,35 @@ public class EmpDao {
 		
 		return jdbcTemplate.update(sql);
 	}
+	
+	public int delete(Employee emp)
+	{
+		String sql = "delete from emp11 where id ="+emp.getId()+" ";
+		
+		return jdbcTemplate.update(sql);
+	}
+	
+	public List<Employee> listEmployees()
+	{
+		return jdbcTemplate.query("select * from emp11", new ResultSetExtractor<List<Employee>>()
+				{
+					public List<Employee>extractData(ResultSet rs) throws SQLException, DataAccessException
+					{
+						List<Employee> list = new ArrayList<Employee>();
+						
+						while(rs.next())
+						{
+							Employee e = new Employee();
+							
+							e.setId(rs.getInt(1));
+							e.setName(rs.getString(2));
+							e.setSalary(rs.getDouble(3));
+							
+							list.add(e);
+						}
+						return list;
+					}
+				});
+	}
 
 }
