@@ -55,7 +55,7 @@ public class EmployeeController {
 
 	@PostMapping("/employees")
 	public Employee createEmployee(@Valid @RequestBody Employee employee) {
-		//employee.setId(sequenceGeneratorService.generateSequence(Employee.SEQUENCE_NAME));
+		employee.setId(sequenceGeneratorService.generateSequence(Employee.SEQUENCE_NAME));
 		return employeeRepository.save(employee);
 	}
 
